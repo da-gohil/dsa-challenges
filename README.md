@@ -1,4 +1,3 @@
-Here’s a description for your **dsa-challenges** repository with emojis added to the headings:
 
 ---
 
