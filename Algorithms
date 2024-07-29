@@ -1,0 +1,67 @@
+#Basic Concepts-
+
+1. ArrayList
+Definition
+A dynamic array that allows for random access and resizes automatically.
+Key Characteristics
+Order: Maintains the order of elements.
+Indexing: Supports indexing (i.e., elements can be accessed via their position).
+Mutability: Elements can be modified, added, or removed.
+Duplicates: Allows duplicate elements.
+Performance
+Access Time: O(1) for index-based access.
+Insertion/Deletion: O(n) in the worst case, due to potential shifting of elements.
+
+2. Tuple
+Definition
+An immutable, ordered collection of elements. In Python, tuples are used; in Java, a similar concept can be created using classes or other constructs.
+Key Characteristics
+Order: Maintains the order of elements.
+Indexing: Supports indexing.
+Mutability: Immutable (cannot be modified once created).
+Duplicates: Allows duplicate elements.
+Performance
+Access Time: O(1) for index-based access.
+Insertion/Deletion: Not applicable (immutable).
+
+3. Set
+Definition
+A collection of unique elements with no specific order.
+Key Characteristics
+Order: Does not maintain order (in Python, order is preserved as of Python 3.7+ but it's not a characteristic of sets).
+Indexing: Does not support indexing.
+Mutability: Elements can be added or removed, but the set itself is mutable.
+Duplicates: Does not allow duplicate elements.
+Performance
+Access Time: O(1) for membership tests.
+Insertion/Deletion: O(1) on average.
+
+4. Dictionary
+Definition
+A collection of key-value pairs where each key is unique and maps to a value.
+Key Characteristics
+Order: Maintains insertion order (as of Python 3.7+).
+Indexing: Uses keys (not integer indices) to access values.
+Mutability: Keys and values can be modified, added, or removed, but keys must be immutable.
+Duplicates: Keys must be unique, but values can be duplicated.
+Performance
+Access Time: O(1) on average for key-based access.
+Insertion/Deletion: O(1) on average for adding or removing key-value pairs.
+
+5. Hash Collision - A hash collision occurs when two different inputs produce the same hash value. In the context of hash functions, this means that despite having different data or objects, their hash codes are identical.
+6. The maximum number that we can store in  an n-bit computer is 2^n -1 
+7. What are don't care values in a set?
+8. Why constructor doesn't have a return type / why can't we make a constructor return anything?
+9. Pass by value and Pass by reference
+10. Why do we need Dynamic memory allocation?
+11. Stack: A stack is a data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added is the first to be removed. It supports two primary operations: push (to add an element) and pop (to remove the most recently added element).
+12. Singly Linked List: A singly linked list is a data structure consisting of nodes where each node contains a data element and a reference (or link) to the next node in the sequence. It allows for efficient insertion and deletion operations but only supports forward traversal.
+
+
+
+#Algorithms
+1) Two pointer Algorithm
+2) Reverse a number - Two-finger algorithm
+3) Generate a number as per their position - COunting Sort ALgorithm
+4) Dynamic arrays and HAsh table implementation - Table Doubling Algorithm(* know about the amortized condition)
+5)
