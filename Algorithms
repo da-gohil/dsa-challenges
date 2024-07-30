@@ -1,261 +1,233 @@
-# README
+#Basic Concepts-
 
-## Table of Contents
-1. [Basic Concepts](#basic-concepts)
-   - [ArrayList](#arraylist)
-   - [Tuple](#tuple)
-   - [Set](#set)
-   - [Dictionary](#dictionary)
-   - [Hash Collision](#hash-collision)
-   - [Maximum Number in n-Bit Computer](#maximum-number-in-n-bit-computer)
-   - [Don't Care Values](#dont-care-values)
-   - [Constructor Return Type](#constructor-return-type)
-   - [Pass by Value and Pass by Reference](#pass-by-value-and-pass-by-reference)
-   - [Dynamic Memory Allocation](#dynamic-memory-allocation)
-2. [Data Structures](#data-structures)
-   - [Stack](#stack)
-   - [Queue](#queue)
-   - [Circular Queue](#circular-queue)
-   - [Singly Linked List](#singly-linked-list)
-3. [Mathematical Series](#mathematical-series)
-   - [Harmonic Series](#harmonic-series)
-   - [Arithmetic Series](#arithmetic-series)
-4. [Programming Concepts](#programming-concepts)
-   - [Recursion](#recursion)
-   - [Homogeneous Containers](#homogeneous-containers)
-   - [Heterogeneous Containers](#heterogeneous-containers)
-5. [Hashing](#hashing)
-6. [Graph Data Structure](#graph-data-structure)
-7. [Algorithms](#algorithms)
-   - [Two Pointer Algorithm](#two-pointer-algorithm)
-   - [Reverse a Number - Two-Finger Algorithm](#reverse-a-number-two-finger-algorithm)
-   - [Counting Sort Algorithm](#counting-sort-algorithm)
-   - [Table Doubling Algorithm](#table-doubling-algorithm)
-   - [Graph Traversal Algorithms](#graph-traversal-algorithms)
-     - [Depth-First Search (DFS)](#depth-first-search-dfs)
-     - [Breadth-First Search (BFS)](#breadth-first-search-bfs)
-   - [Greedy Algorithm](#greedy-algorithm)
-     - [Kruskal’s Algorithm](#kruskals-algorithm)
-     - [Huffman Coding](#huffman-coding)
+1. ArrayList
+Definition
+A dynamic array that allows for random access and resizes automatically.
+Key Characteristics
+Order: Maintains the order of elements.
+Indexing: Supports indexing (i.e., elements can be accessed via their position).
+Mutability: Elements can be modified, added, or removed.
+Duplicates: Allows duplicate elements.
+Performance
+Access Time: O(1) for index-based access.
+Insertion/Deletion: O(n) in the worst case, due to potential shifting of elements.
 
-## Basic Concepts
+2. Tuple
+Definition
+An immutable, ordered collection of elements. In Python, tuples are used; in Java, a similar concept can be created using classes or other constructs.
+Key Characteristics
+Order: Maintains the order of elements.
+Indexing: Supports indexing.
+Mutability: Immutable (cannot be modified once created).
+Duplicates: Allows duplicate elements.
+Performance
+Access Time: O(1) for index-based access.
+Insertion/Deletion: Not applicable (immutable).
 
-### ArrayList
-**Definition**: A dynamic array that allows for random access and resizes automatically.
+3. Set
+Definition
+A collection of unique elements with no specific order.
+Key Characteristics
+Order: Does not maintain order (in Python, order is preserved as of Python 3.7+ but it's not a characteristic of sets).
+Indexing: Does not support indexing.
+Mutability: Elements can be added or removed, but the set itself is mutable.
+Duplicates: Does not allow duplicate elements.
+Performance
+Access Time: O(1) for membership tests.
+Insertion/Deletion: O(1) on average.
 
-**Key Characteristics**:
-- **Order**: Maintains the order of elements.
-- **Indexing**: Supports indexing (i.e., elements can be accessed via their position).
-- **Mutability**: Elements can be modified, added, or removed.
-- **Duplicates**: Allows duplicate elements.
+4. Dictionary
+Definition
+A collection of key-value pairs where each key is unique and maps to a value.
+Key Characteristics
+Order: Maintains insertion order (as of Python 3.7+).
+Indexing: Uses keys (not integer indices) to access values.
+Mutability: Keys and values can be modified, added, or removed, but keys must be immutable.
+Duplicates: Keys must be unique, but values can be duplicated.
+Performance
+Access Time: O(1) on average for key-based access.
+Insertion/Deletion: O(1) on average for adding or removing key-value pairs.
 
-**Performance**:
-- **Access Time**: O(1) for index-based access.
-- **Insertion/Deletion**: O(n) in the worst case, due to potential shifting of elements.
+5. Hash Collision - A hash collision occurs when two different inputs produce the same hash value. In the context of hash functions, this means that despite having different data or objects, their hash codes are identical.
+6. The maximum number that we can store in  an n-bit computer is 2^n -1 
+7. What are don't care values in a set?
+8. Why constructor doesn't have a return type / why can't we make a constructor return anything?
+9. Pass by value and Pass by reference
+10. Why do we need Dynamic memory allocation?
+11. Stack: A stack is a data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added is the first to be removed. It supports two primary operations: push (to add an element) and pop (to remove the most recently added element).
+Operations of Stack - 
+  1) PUSH
+  2) POP
+  3) TOP
+  3) isFUll
+  4) isEmpty
 
-### Tuple
-**Definition**: An immutable, ordered collection of elements. In Python, tuples are used; in Java, a similar concept can be created using classes or other constructs.
+Queue: A queue is a data structure that follows the First In, First Out (FIFO) principle, meaning the first element added is the first to be removed. It supports several primary operations to manage elements within it.
 
-**Key Characteristics**:
-- **Order**: Maintains the order of elements.
-- **Indexing**: Supports indexing.
-- **Mutability**: Immutable (cannot be modified once created).
-- **Duplicates**: Allows duplicate elements.
+Operations of Queue:
 
-**Performance**:
-- **Access Time**: O(1) for index-based access.
-- **Insertion/Deletion**: Not applicable (immutable).
+Enqueue: Add an element to the end of the queue.
+Dequeue: Remove the element from the front of the queue.
+Front: Get the element at the front of the queue without removing it.
+isFull: Check if the queue is full (applicable in bounded queues).
+isEmpty: Check if the queue is empty.
 
-### Set
-**Definition**: A collection of unique elements with no specific order.
+Circular Queue: A circular queue is a data structure that follows the First In, First Out (FIFO) principle, but unlike a regular queue, the last position is connected back to the first position to make a circle. This allows for efficient use of space by reusing the empty positions created by dequeuing elements.
 
-**Key Characteristics**:
-- **Order**: Does not maintain order (in Python, order is preserved as of Python 3.7+ but it's not a characteristic of sets).
-- **Indexing**: Does not support indexing.
-- **Mutability**: Elements can be added or removed, but the set itself is mutable.
-- **Duplicates**: Does not allow duplicate elements.
+Operations of Circular Queue:
 
-**Performance**:
-- **Access Time**: O(1) for membership tests.
-- **Insertion/Deletion**: O(1) on average.
+Enqueue: Add an element to the end of the queue.
+Dequeue: Remove the element from the front of the queue.
+Front: Get the element at the front of the queue without removing it.
+Rear: Get the element at the rear of the queue without removing it.
+isFull: Check if the queue is full.
+isEmpty: Check if the queue is empty
 
-### Dictionary
-**Definition**: A collection of key-value pairs where each key is unique and maps to a value.
+Singly Linked List: A singly linked list is a data structure consisting of nodes where each node contains a data element and a reference (or link) to the next node in the sequence. It allows for efficient insertion and deletion operations but only supports forward traversal.
 
-**Key Characteristics**:
-- **Order**: Maintains insertion order (as of Python 3.7+).
-- **Indexing**: Uses keys (not integer indices) to access values.
-- **Mutability**: Keys and values can be modified, added, or removed, but keys must be immutable.
-- **Duplicates**: Keys must be unique, but values can be duplicated.
+Operations of Singly Linked List:
 
-**Performance**:
-- **Access Time**: O(1) on average for key-based access.
-- **Insertion/Deletion**: O(1) on average for adding or removing key-value pairs.
+Insertion: Add a node to the linked list at a specified position (beginning, end, or middle).
+Deletion: Remove a node from the linked list from a specified position.
+Traversal: Traverse the entire linked list from the head node to the last node.
+Search: Find a node with a specific value in the linked list.
+Update: Modify the data of a specific node in the linked list.
 
-### Hash Collision
-A hash collision occurs when two different inputs produce the same hash value. In the context of hash functions, this means that despite having different data or objects, their hash codes are identical.
+Harmonic Series
+The harmonic series is the sum of the reciprocals of the positive integers. Despite the terms getting smaller as 
+𝑘
+k increases, the series does not converge to a finite limit; it diverges. This means that as more terms are added, the sum grows without bound.
 
-### Maximum Number in n-Bit Computer
-The maximum number that can be stored in an n-bit computer is \(2^n - 1\).
+The harmonic series is significant in various fields of mathematics and science, including number theory, analysis, and physics
 
-### Don't Care Values
-In a set, don't care values refer to values that are ignored or not considered when evaluating certain conditions or operations.
+Arithmetic Series
+An arithmetic series is the sum of the terms of an arithmetic sequence, where each term after the first is obtained by adding a constant difference to the preceding term. 
 
-### Constructor Return Type
-A constructor does not have a return type because its sole purpose is to initialize an object. Constructors implicitly return the instance of the class they are constructing.
+Recursion
+Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. It is used to break down complex problems into simpler, more manageable sub-problems. A recursive function typically consists of two main components:
 
-### Pass by Value and Pass by Reference
-- **Pass by Value**: The function receives a copy of the argument's value, so changes to the parameter do not affect the original argument.
-- **Pass by Reference**: The function receives a reference to the actual argument, so changes to the parameter affect the original argument.
+Base Case: The condition under which the recursion stops. It prevents the function from calling itself indefinitely and usually provides a direct solution for the simplest instance of the problem.
 
-### Dynamic Memory Allocation
-Dynamic memory allocation allows a program to request memory during runtime, providing flexibility to handle varying data sizes and improving memory management.
+Recursive Case: The part of the function where it calls itself with a modified argument, moving towards the base case.
 
-## Data Structures
+When to Use Recursion
+Recursion is useful when:
 
-### Stack
-A stack is a data structure that follows the Last In, First Out (LIFO) principle.
+The problem can be naturally divided into similar sub-problems.
+The problem's solution involves breaking it down into simpler instances of itself.
+You prefer a solution that is easier to implement or more readable compared to iterative solutions.
 
-**Operations**:
-1. **PUSH**: Add an element to the stack.
-2. **POP**: Remove the most recently added element.
-3. **TOP**: Access the top element without removing it.
-4. **isFull**: Check if the stack is full.
-5. **isEmpty**: Check if the stack is empty.
+Considerations
+Stack Overflow: Recursion can lead to stack overflow errors if the recursion depth is too deep. This happens because each recursive call consumes stack space.
+Performance: Recursive solutions can be less efficient due to overhead from multiple function calls. In some cases, iterative solutions might be more efficient.
+Tail Recursion: Some programming languages optimize tail-recursive functions to avoid increasing stack depth.
 
-### Queue
-A queue is a data structure that follows the First In, First Out (FIFO) principle.
+Homogeneous Containers
+Definition: A homogeneous container is a collection that stores elements of the same type. This ensures type safety and consistency within the container.
 
-**Operations**:
-1. **Enqueue**: Add an element to the end of the queue.
-2. **Dequeue**: Remove the element from the front of the queue.
-3. **Front**: Get the element at the front without removing it.
-4. **isFull**: Check if the queue is full.
-5. **isEmpty**: Check if the queue is empty.
+Examples in Java:
 
-### Circular Queue
-A circular queue is a queue where the last position is connected back to the first position.
+ArrayList: A dynamic array that stores elements of a specified type.
+HashSet: A collection that does not allow duplicate elements and stores elements of a specified type.
+LinkedList: A doubly-linked list that stores elements of a specified type.
+Heterogeneous Containers
+Definition: A heterogeneous container is a collection that can store elements of different types. This allows more flexibility but may sacrifice type safety and requires careful handling of type conversions.
 
-**Operations**:
-1. **Enqueue**: Add an element to the end of the queue.
-2. **Dequeue**: Remove the element from the front of the queue.
-3. **Front**: Get the element at the front without removing it.
-4. **Rear**: Get the element at the rear without removing it.
-5. **isFull**: Check if the queue is full.
-6. **isEmpty**: Check if the queue is empty.
+Examples in Java:
 
-### Singly Linked List
-A singly linked list consists of nodes where each node contains data and a reference to the next node.
+Object Array: An array that can store elements of different types, since Object is the base class for all Java objects.
+HashMap: A map that stores key-value pairs where keys and values differ.
+Hash: A fixed-size value generated from input data.
+Hashing: The process of generating a hash value using a hash function.
+Hash Function: An algorithm that converts input data into a hash value.
+Hash Table: A data structure that uses hashing to manage and retrieve data efficiently.
+Collisions: Occur when different inputs produce the same hash value.
 
-**Operations**:
-1. **Insertion**: Add a node at a specified position.
-2. **Deletion**: Remove a node from a specified position.
-3. **Traversal**: Traverse from the head node to the last node.
-4. **Search**: Find a node with a specific value.
-5. **Update**: Modify the data of a node.
+Graph Data Structure
+A graph is a versatile data structure used to represent relationships or connections between pairs of entities. It is widely used in various applications such as social networks, computer networks, route mapping, and many others.
 
-## Mathematical Series
+Components of a Graph
+Vertices (or Nodes):
 
-### Harmonic Series
-The harmonic series is the sum of the reciprocals of positive integers. Despite the terms getting smaller, the series diverges, meaning it grows without bound as more terms are added.
+The fundamental units of a graph.
+Represent entities or objects.
+Example: In a social network, users can be represented as vertices.
+Edges (or Arcs):
 
-### Arithmetic Series
-An arithmetic series is the sum of the terms of an arithmetic sequence, where each term is obtained by adding a constant difference to the preceding term.
+The connections or relationships between vertices.
+Represent the relationship or link between entities.
+Example: In a social network, friendships or followings between users can be represented as edges.
+Types of Graphs
+Undirected Graph:
 
-## Programming Concepts
+Edges have no direction.
+The connection between vertices is bidirectional.
+Example: A social network where friendships are mutual.
+Directed Graph (Digraph):
 
-### Recursion
-Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem.
+Edges have a direction.
+The connection between vertices is unidirectional.
+Example: A Twitter follow relationship where one user follows another, but not necessarily vice versa.
+Weighted Graph:
 
-**Components**:
-- **Base Case**: Stops the recursion by providing a direct solution.
-- **Recursive Case**: Function calls itself with a modified argument.
+Edges have weights (or costs) associated with them.
+The weight represents the cost, distance, or any other quantitative measure.
+Example: A road network where edges represent distances between cities.
+Unweighted Graph:
 
-**Considerations**:
-- **Stack Overflow**: Can occur if the recursion depth is too deep.
-- **Performance**: Recursive solutions can be less efficient due to function call overhead.
-- **Tail Recursion**: Some languages optimize tail-recursive functions to reduce stack depth.
+Edges have no weights.
+The connection between vertices is simply represented as present or absent.
+Cyclic Graph:
 
-### Homogeneous Containers
-**Definition**: Collections that store elements of the same type.
+Contains at least one cycle (a path that starts and ends at the same vertex).
+Acyclic Graph:
 
-**Examples in Java**:
-- `ArrayList`: A dynamic array of specified type.
-- `HashSet`: A set of unique elements of specified type.
-- `LinkedList`: A doubly-linked list of specified type.
+Does not contain any cycles.
+Connected Graph:
 
-### Heterogeneous Containers
-**Definition**: Collections that store elements of different types.
+There is a path between every pair of vertices.
+In undirected graphs, every vertex is reachable from every other vertex.
+Disconnected Graph:
 
-**Examples in Java**:
-- `Object Array`: An array that can store different types of elements.
-- `HashMap`: A map storing key-value pairs of different types.
+Some vertices are not reachable from others.
+The graph consists of multiple disconnected subgraphs.
+Complete Graph:
 
-## Hashing
+Every pair of distinct vertices is connected by a unique edge.
+Example: A fully connected network.
+Graph Representations
+Adjacency Matrix:
 
-### Hash
-A fixed-size value generated from input data.
+A 2D array where the cell at row i and column j indicates whether there is an edge between vertex i and vertex j.
+Pros: Simple and easy to implement.
+Cons: Inefficient in terms of space for sparse graphs.
 
-### Hashing
-The process of generating a hash value using a hash function.
+Adjacency List:
 
-### Hash Function
-An algorithm that converts input data into a hash value.
+An array of lists where each list represents the vertices connected to a particular vertex.
+Pros: More space-efficient for sparse graphs.
+Cons: Slightly more complex to implement and access
 
-### Hash Table
-A data structure that uses hashing to manage and retrieve data efficiently.
+Graphs have directions to indicate and assume the right way or the existing path.
+The software is useless if nobody is connected.
 
-### Collisions
-Occur when different inputs produce the same hash value.
+# We do not want the algorithm to be fast, we want it to be linear
+# High-level Concepts --> Data ZStructures + Algorithms --> Object-Oriented Programming --> Testing
 
-## Graph Data Structure
-A graph represents relationships between pairs of entities.
 
-**Components**:
-- **Vertices (Nodes)**: Fundamental units representing entities.
-- **Edges (Arcs)**: Connections or relationships between vertices.
+#Algorithms
+1) Two pointer Algorithm
+2) Reverse a number - Two-finger algorithm
+3) Generate a number as per their position - COunting Sort ALgorithm
+4) Dynamic arrays and HAsh table implementation - Table Doubling Algorithm(* know about the amortized condition)
+5) Graph Traversal Algorithms -
+  a)Depth-First Search (DFS): We will go to extreme depth unless and until we have no other point to reach. Explores as far as possible along a branch before backtracking.
+Uses a stack (either explicitly or via recursion). We come back at the same node and do the same recursive call again and again. 
+  b)Breadth-First Search (BFS): Explores all neighbors at the present depth level before moving on to nodes at the next depth level.
+Uses a queue.
 
-**Types of Graphs**:
-- **Undirected Graph**: Bidirectional edges.
-- **Directed Graph (Digraph)**: Unidirectional edges.
-- **Weighted Graph**: Edges have weights.
-- **Unweighted Graph**: Edges have no weights.
-- **Cyclic Graph**: Contains at least one cycle.
-- **Acyclic Graph**: No cycles.
-- **Connected Graph**: Every vertex is reachable from every other vertex.
-- **Disconnected Graph**: Some vertices are not reachable from others.
-- **Complete Graph**: Every pair of distinct vertices is connected.
-
-**Graph Representations**:
-- **Adjacency Matrix**: A 2D array indicating edge presence.
-- **Adjacency List**: An array of lists where each list represents connected vertices.
-
-## Algorithms
-
-### Two Pointer Algorithm
-An algorithmic technique that uses two pointers to solve problems efficiently, typically in sorting or searching.
-
-### Reverse a Number - Two-Finger Algorithm
-An algorithm to reverse the digits of a number using two pointers or indices.
-
-### Counting Sort Algorithm
-A non-comparison-based sorting algorithm that counts occurrences of each value to determine positions in the sorted array.
-
-### Table Doubling Algorithm
-Used in dynamic arrays and hash tables to handle growth by doubling the size of the array. Consider amortized conditions for efficiency.
-
-### Graph Traversal Algorithms
-
-#### Depth-First Search (DFS)
-Explores as far as possible along a branch before backtracking. Uses a stack (explicitly or via recursion).
-
-#### Breadth-First Search (BFS)
-Explores all neighbors at the present depth level before moving on to the next level. Uses a queue.
-
-### Greedy Algorithm
-Aims to make the optimal local choice at each step with the hope of finding the global optimum.
-
-**Examples**:
-- **Kruskal’s Algorithm**: Finds the Minimum Spanning Tree by selecting the smallest weight edge that doesn't form a cycle.
-- **Huffman Coding**: A data compression algorithm that builds a prefix-free binary code based on character frequencies.
-
+Our goal for BFS and DFS is to visit each node exactly once not more than that. 
+6) Greedy Algorithm: Greedy algorithms often leverage this property, as each local decision should lead to an optimal global solution.
+The algorithm terminates when no more choices can be made, or the solution is complete.
+Kruskal’s Algorithm: A greedy algorithm to find the Minimum Spanning Tree by always selecting the smallest weight edge that doesn't form a cycle.
+Huffman Coding: A data compression algorithm that uses a greedy approach to build a prefix-free binary code based on the frequencies of characters.
