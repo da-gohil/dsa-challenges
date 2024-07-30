@@ -1,14 +1,43 @@
-Sure! Here’s a revised version of the README with line partitions and emojis for better readability:
-
 ---
 
-# 📚 README
+# 📚 Program Structures and Algorithms (PSA - Summer 2024) - Notes
 
 ---
 
 ## Index
 1. [Basic Concepts](#basic-concepts)
+   - [ArrayList](#arraylist)
+   - [Tuple](#tuple)
+   - [Set](#set)
+   - [Dictionary](#dictionary)
+   - [Hash Collision](#hash-collision)
+   - [Maximum Number in n-Bit Computer](#maximum-number-in-n-bit-computer)
+   - [Don’t Care Values in a Set](#dont-care-values-in-a-set)
+   - [Constructor Return Type](#constructor-return-type)
+   - [Pass by Value vs. Pass by Reference](#pass-by-value-vs-pass-by-reference)
+   - [Dynamic Memory Allocation](#dynamic-memory-allocation)
+   - [Stack](#stack)
+   - [Queue](#queue)
+   - [Circular Queue](#circular-queue)
+   - [Singly Linked List](#singly-linked-list)
+   - [Harmonic Series](#harmonic-series)
+   - [Arithmetic Series](#arithmetic-series)
+   - [Recursion](#recursion)
+   - [Homogeneous Containers](#homogeneous-containers)
+   - [Heterogeneous Containers](#heterogeneous-containers)
+   - [Hash and Hashing](#hash-and-hashing)
+   - [Graph Data Structure](#graph-data-structure)
 2. [Algorithms](#algorithms)
+   - [Two Pointer Algorithm](#two-pointer-algorithm)
+   - [Reverse a Number - Two-Finger Algorithm](#reverse-a-number--two-finger-algorithm)
+   - [Counting Sort Algorithm](#counting-sort-algorithm)
+   - [Table Doubling Algorithm](#table-doubling-algorithm)
+   - [Graph Traversal Algorithms](#graph-traversal-algorithms)
+     - [Depth-First Search (DFS)](#depth-first-search-dfs)
+     - [Breadth-First Search (BFS)](#breadth-first-search-bfs)
+   - [Greedy Algorithm](#greedy-algorithm)
+     - [Kruskal’s Algorithm](#kruskals-algorithm)
+     - [Huffman Coding](#huffman-coding)
 
 ---
 
@@ -132,7 +161,9 @@ Sure! Here’s a revised version of the README with line partitions and emojis f
   - **Tail Recursion**: Some languages optimize tail-recursive functions.
 
 ### 18. Homogeneous Containers
-- **Definition**: Collections storing elements of the same type.
+- **Definition**: Collections storing elements
+
+ of the same type.
 - **Examples**:
   - **ArrayList**: Dynamic array of a specified type.
   - **HashSet**: Collection without duplicates.
@@ -150,6 +181,11 @@ Sure! Here’s a revised version of the README with line partitions and emojis f
 - **Hash Function**: Converts input data into a hash value.
 - **Hash Table**: Uses hashing to manage and retrieve data.
 - **Collisions**: Occur when different inputs produce the same hash value.
+
+### 21. Graph Data Structure
+- **Definition**: A collection of nodes (vertices) and edges connecting pairs of nodes. Used to represent relationships and connections.
+
+---
 
 ## Algorithms
 
@@ -177,4 +213,11 @@ Sure! Here’s a revised version of the README with line partitions and emojis f
 - **Definition**: Makes optimal local choices at each step to find a global optimum.
 
 #### a) Kruskal’s Algorithm
--
+- **Definition**: Finds the Minimum Spanning Tree (MST) by sorting edges and adding them one by one, avoiding cycles.
+
+#### b) Huffman Coding
+- **Definition**: An optimal prefix coding algorithm used for data compression by assigning variable-length codes to input characters.
+
+---
+
+Feel free to tweak or add more details as needed!
