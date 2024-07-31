@@ -231,3 +231,5 @@ Our goal for BFS and DFS is to visit each node exactly once not more than that.
 The algorithm terminates when no more choices can be made, or the solution is complete.
 Kruskal’s Algorithm: A greedy algorithm to find the Minimum Spanning Tree by always selecting the smallest weight edge that doesn't form a cycle.
 Huffman Coding: A data compression algorithm that uses a greedy approach to build a prefix-free binary code based on the frequencies of characters.
+
+7) Bucket Sort - Leetcode 347
