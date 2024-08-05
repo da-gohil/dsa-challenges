@@ -17,7 +17,7 @@ class Solution {
         return res;
     }
 }
-// Approach 02 - Using Dyanmic size - ArrayList
+// Approach 02 - Using Dynamic size - ArrayList
 import java.util.ArrayList;
 import java.util.Collections;
 
