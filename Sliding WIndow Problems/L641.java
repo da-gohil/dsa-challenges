@@ -18,7 +18,7 @@ class Solution {
                 //Subtract the integer at the windowStart from windowSum
                 windowSum -= nums[windowStart];
                 //Move the window one step ahead
-                windowStart;
+                windowStart++;
             }
         }
         return Averages;
