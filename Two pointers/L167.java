@@ -1,35 +1,24 @@
-//Approach 01 - using predefined method by Java Library - reverse
-class Solution {
-    public boolean isPalindrome(String s) {
-        // Step 01 - Convert upper case to lower case & Remove all non-alphanumeric values
-        String s1 = s.toLowerCase().replaceAll("[^a-z0-9]", "");
-        
-        // Step 02 - Use StringBuilder to reverse the string
-        StringBuilder sb = new StringBuilder(s1);
-        String s2 = sb.reverse().toString();
-        
-        // Step 03 - Compare the original converted string to the reversed converted string
-        return s1.equals(s2);
-    }
-}
-
-//Approach 02 - Without using reverse predefined method of java
+//Two pointer approach, simple and easy to implement
 
 class Solution {
-    public boolean isPalindrome(String s) {
-        // Step 01 - Convert upper case to lower case & Remove all non-alphanumeric values
-        String s1 = s.toLowerCase().replaceAll("[^a-z0-9]", "");
-
-        int i = 0;
-        int j = s1.length() - 1;
+    public int[] twoSum(int[] numbers, int target) {
+        int left = 0;
+        int right = numbers.length - 1;
         
-        while (i <= j) {
-            if (s1.charAt(i) != s1.charAt(j)) {
-                return false;
+        while (left < right) {
+            int sum = numbers[left] + numbers[right];
+            
+            if (sum == target) {
+                // Adjust for 1-based indexing if needed
+                return new int[] {left + 1, right + 1};
+            } else if (sum < target) {
+                left++; // Move left pointer to the right to increase the sum
+            } else {
+                right--; // Move right pointer to the left to decrease the sum
             }
-            i++;
-            j--;
-        }        
-        return true;
+        }
+        
+        // If no solution is found
+        return new int[0];
     }
 }
