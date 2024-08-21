@@ -1,6 +1,7 @@
 // Trapping rain water - Hard 
 // Leetcode 42
 // width of each bar is 1
+// The storage of weater will be dependent on the minimum height, simple rule of bucket
 
 class Solution {
     public int trap(int[] height) {
