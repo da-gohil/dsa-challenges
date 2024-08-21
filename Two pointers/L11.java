@@ -11,14 +11,16 @@ class Solution {
         int maxArea = 0;
 
         while (leftPointer < rightPointer) {
-            for (int i = 0; i < height.length; i++) {
-                if(height[leftPointer] < height[rightPointer]){
-                    maxArea = Math.max(maxArea, height[leftPointer] * (rightPointer - leftPointer));
-                    leftPointer++;
-                }else{
-                    maxArea = Math.max(maxArea, height[rightPointer] * (leftPointer - rightPointer));
-                    rightPointer--;
-                }
+            int width = rightPointer - leftPointer;
+            int currentHeight = Math.min(height[leftPointer], height[rightPointer]);
+            int currentArea = width * currentHeight;
+            maxArea = Math.max(maxArea, currentArea);
+
+            // Move the pointer that points to the shorter line
+            if (height[leftPointer] < height[rightPointer]) {
+                leftPointer++;
+            } else {
+                rightPointer--;
             }
         }
         return maxArea;
