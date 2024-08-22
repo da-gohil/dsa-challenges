@@ -4,7 +4,7 @@
 // Approach 01
 class Solution {
     public int maxProfit(int[] prices) {
-        
+
         int windowBuy = 0; //WindowStart
         int maxProfit = 0;
 
@@ -16,10 +16,8 @@ class Solution {
                 int currentProfit = price[windowSell] - price[windowBuy];
                 maxProfit = Math.max(maxProfit, currentProfit);
             } 
-            return maxProfit;
         }
-
-        return maxValue;
+        return maxProfit;
     }
 }
 
