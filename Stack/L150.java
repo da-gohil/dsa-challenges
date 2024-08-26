@@ -1,5 +1,6 @@
-//Leetcode 150 - Reverse Polish Notation
-
+// Leetcode 150 - Reverse Polish Notation
+// Post-fix, In-fix, Pre-Infix
+// This particular is of POST-FIX 
 import java.util.Stack;
 
 class Solution {
