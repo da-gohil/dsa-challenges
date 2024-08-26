@@ -34,7 +34,6 @@ class Solution {
                 stack.push(Integer.parseInt(token));
             }
         }
-        
         // The result is the only element left in the stack
         return stack.pop();
     }
