@@ -1,46 +1,40 @@
-// Leetcode 155 stack implementation and operations in constant time
+//Leetcode 150 - Reverse Polish Notation
 
 import java.util.Stack;
 
-class MinStack {
-    private Stack<Integer>stack;
-    private Stack<Integer>minStack;
-    
-    public MinStack() {
-        stack = new Stack<>();
-        minStack = new Stack<>();
-    }
-    
-    public void push(int val) {
-        stack.push(val);
-         // Push the minimum element onto minStack
-         if (minStack.isEmpty() || val <= minStack.peek()) {
-            minStack.push(val);
+class Solution {
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
+        
+        // Iterate through each token
+        for (String token : tokens) {
+            if (token.equals("+") || token.equals("-") || token.equals("*") || token.equals("/")) {
+                // Pop two operands from the stack
+                int b = stack.pop();
+                int a = stack.pop();
+                
+                // Perform the operation and push the result back onto the stack
+                switch (token) {
+                    case "+":
+                        stack.push(a + b);
+                        break;
+                    case "-":
+                        stack.push(a - b);
+                        break;
+                    case "*":
+                        stack.push(a * b);
+                        break;
+                    case "/":
+                        stack.push(a / b); // Integer division
+                        break;
+                }
+            } else {
+                // Token is an operand, push it onto the stack
+                stack.push(Integer.parseInt(token));
+            }
         }
-    }
-    
-    public void pop() {
-        int poppedElement = stack.pop();
-        // If the popped element is the minimum, pop it from minStack as well
-        if (poppedElement == minStack.peek()) {
-            minStack.pop();
-        }
-    }
-    
-    public int top() {
-        return stack.peek();
-    }
-    
-    public int getMin() {
-        return minStack.peek();
+        
+        // The result is the only element left in the stack
+        return stack.pop();
     }
 }
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * MinStack obj = new MinStack();
- * obj.push(val);
- * obj.pop();
- * int param_3 = obj.top();
- * int param_4 = obj.getMin();
- */
