@@ -2,16 +2,17 @@ import java.util.Arrays;
 
 class p1 {
     public static void main(String[] args) {
-        int[] SquareNum = new int[10];
+    
+        int[] rno = new int[10];
+        int length = 0;
 
-        for (int i = 0; i < SquareNum.length; i++) {
-            int square = ((i + 1) * (i + 1));
-            SquareNum[i] = square;
+        for(int i=0; i < rno.length; i++){
+            rno[length] = i;
+            length++;
         }
 
-        System.out.println(Arrays.toString(SquareNum));
-        for(int num : SquareNum){
-            System.out.println(num);
+        for(int rollNumbers : rno){
+            System.out.println(rollNumbers);
         }
     }
 }
