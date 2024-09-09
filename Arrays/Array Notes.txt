@@ -1,0 +1,10 @@
+/* Searching from an array - we can do by multiple methods
+I) Linear Search - Going thorugh all the elements and checking whether the element exists or not
+
+EDGE CASES -> No element only exists in an array(length = 0) || array is pointing to null(array = null), 
+
+2) take care of the edge cases before proceeding with the actual search, we don't check the rest of the elements once we'd found the element we were looking for
+
+II) Binary Search - we repeatedly look at the middle element in the Array, and determine whether the element we're looking for must be to the left, or to the right
+--> only works if the data is sorted
+*/
