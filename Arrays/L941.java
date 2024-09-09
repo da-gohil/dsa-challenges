@@ -22,14 +22,14 @@ class Solution {
         while (i + 1 < arr.length && arr[i] > arr[i + 1]) {
             i++;
         }
-        
+
         // Step 4: Check if we've reached the end of the array
         return i == arr.length - 1;
     }
 
     public static void main(String[] args) {
         Solution sol = new Solution();
-        int[] arr = {4, 32, 1};
+        int[] arr = {0, 3, 2, 1};
         System.out.println(sol.validMountainArray(arr)); // Output: true
     }
 }
