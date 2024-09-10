@@ -7,4 +7,18 @@ EDGE CASES -> No element only exists in an array(length = 0) || array is pointin
 
 II) Binary Search - we repeatedly look at the middle element in the Array, and determine whether the element we're looking for must be to the left, or to the right
 --> only works if the data is sorted
+
+III) An important difference for in-place vs not in-place is that in-place modifies the input Array. This means that other functions can no longer access the original data, because it has been overwritten.
+-->  Use the two pointer technique to remove the duplicates in-place
+--> In-place operations are valuable when appropriate because they reduce the space complexity of an algorithm. Instead of requiring O(N)O(N) space, we can reduce it down to O(1)
+O(1).
+--> Simple conditional statements, and Loops can make your problem very simpler, ensure to read the question with ample amount of concentration
+
+IV) // Deletion from an array - we decrement the length operator -> length--;
+// Insertion - we add and increment the length operator 
+//3 Types
+// Deleting the last element of the Array.
+// Deleting the first element of the Array -> The most costliest operation in arrays
+// Deletion at any given index.
+
 */
