@@ -1,8 +1,7 @@
 import java.util.*;
 
-//Attempt 02
-import java.util.*;
-
+//Approach 02
+// Done it without extra space and in O(n) runtime
 class L448 {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> missingNumbers = new ArrayList<>();
