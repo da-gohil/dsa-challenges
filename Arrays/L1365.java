@@ -1,3 +1,4 @@
+//time complexity is O(n log n) and the space complexity is O(n).
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
