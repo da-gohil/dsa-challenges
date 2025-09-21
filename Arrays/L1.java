@@ -1,6 +1,7 @@
+//Time and Space complexity: O(N)
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Arrays;
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
