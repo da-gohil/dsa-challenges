@@ -19,7 +19,7 @@ class L268{
     public static void main(String[] args) {
         L268 sol = new L268();
 
-        int[] numbers = {2};
+        int[] numbers = {0};
         int result = sol.missingNumber(numbers);
 
         System.out.println("Missing Number in the list is: " + result);
